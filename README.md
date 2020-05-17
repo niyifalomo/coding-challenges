@@ -1,2 +1,4 @@
 # coding-practice
-Coding problems
+Solutions to different coding challenges on Leetcode, GeeksForGeeks etc.
+
+Categories: Easy, Medium and Hard
