@@ -44,7 +44,7 @@ public class SmallestMissingInteger {
         for (int i=0;i<n;i++) {
             if (nums[i]>0) positiveNumbers.put(nums[i],true);
         }
-        // get the first integer not present in inout array
+        // get the first integer not present in input array
         for(int i=1;i<=n;i++) {
             if (positiveNumbers.get(i)==null) return i;
         }
