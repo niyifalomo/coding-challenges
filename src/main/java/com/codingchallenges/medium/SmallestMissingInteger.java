@@ -38,7 +38,7 @@ public class SmallestMissingInteger {
 
     public static int smallestInteger(int[] nums) {
         int n = nums.length;
-        HashMap<Integer,Boolean> positiveNumbers= new HashMap<>();
+        HashMap<Integer,Boolean> positiveNumbers= new HashMap<Integer, Boolean>();
 
         if (n==0) return 1;
         //keep track of positive numbers that exist in input array
