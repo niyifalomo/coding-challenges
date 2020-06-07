@@ -1,4 +1,8 @@
 package com.codingchallenges.easy;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Given an array A of strings made only from lowercase letters, return a list of all characters that show up in all strings within the list (including duplicates).  For example, if a character occurs 3 times in all strings but not 4 times, you need to include that character three times in the final answer.
@@ -19,4 +23,49 @@ package com.codingchallenges.easy;
  */
 
 public class CommonCharacters {
+
+    private static final Logger LOGGER = LogManager.getLogger(CommonCharacters.class.getName());
+
+    public static void main(String[] args){
+        String[] strings = {"cool","lock","cook"};
+        LOGGER.debug(commonChars(strings));
+
+    }
+
+    public static List<String> commonChars(String[] A){
+        List<String> lst = new ArrayList<>();
+        String firstString=A[0];
+        for (int i=0;i<firstString.length();i++) {
+            Boolean allStringContainsChar= true;
+            for (int j = 1; j < A.length; j++) {
+                StringBuilder  str =  new StringBuilder();
+                str.append(A[j]);
+                int index = str.indexOf(String.valueOf(firstString.charAt(i)));
+                if (index == -1) {
+                    allStringContainsChar= false;
+                    break;
+                }
+                else A[j] =String.valueOf(str.deleteCharAt(index));
+            }
+            if(allStringContainsChar) lst.add(String.valueOf(firstString.charAt(i)));
+        }
+        return lst;
+
+        /*
+        //Shorter but slower
+        List<String> lst = new ArrayList<>();
+        String firstString=A[0];
+        for (int i=0;i<firstString.length();i++) {
+            Boolean allContainsChar= true;
+            for (int j = 1; j < A.length; j++) {
+                String  c = String.valueOf(firstString.charAt(i));
+                int index = A[j].indexOf(c);
+                if (index == -1) allContainsChar= false;
+                else  A[j] = A[j].replaceFirst(c,"");
+            }
+            if(allContainsChar) lst.add(String.valueOf(firstString.charAt(i)));
+        }
+        return lst;
+         */
+    }
 }
