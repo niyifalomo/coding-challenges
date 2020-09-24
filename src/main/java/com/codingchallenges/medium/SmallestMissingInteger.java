@@ -24,17 +24,6 @@ import java.util.HashMap;
 
 
 public class SmallestMissingInteger {
-    private static final Logger LOGGER = LogManager.getLogger(SmallestMissingInteger.class);
-    public static void main(String[] args) {
-        //int[] nums ={2, 3, 7, 6, 8, -1, -10, 15};
-        //int[] nums = { 2, 3, -7, 6, 8, 1, -10, 15 };
-        //int[] nums= {7,8,9,11,12};
-        //int[] nums={4,1,2,3};
-        //int[] nums={1};
-        //int[] nums = {1,2,3,4,5};
-        int[] nums = {-1,1,2,3,45,100,39,4,5};
-        LOGGER.debug("Smallest Missing Integer: {}", smallestInteger(nums));
-    }
 
     public static int smallestInteger(int[] nums) {
         int n = nums.length;

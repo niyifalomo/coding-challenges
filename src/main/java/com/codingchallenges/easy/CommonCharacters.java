@@ -24,14 +24,6 @@ import java.util.List;
 
 public class CommonCharacters {
 
-    private static final Logger LOGGER = LogManager.getLogger(CommonCharacters.class.getName());
-
-    public static void main(String[] args){
-        String[] strings = {"cool","lock","cook"};
-        LOGGER.debug(commonChars(strings));
-
-    }
-
     public static List<String> commonChars(String[] A){
         List<String> lst = new ArrayList<>();
         String firstString=A[0];

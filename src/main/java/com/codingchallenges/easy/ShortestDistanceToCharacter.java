@@ -17,14 +17,6 @@ import java.util.Arrays;
  */
 public class ShortestDistanceToCharacter {
 
-    private static final Logger LOGGER = LogManager.getLogger(ShortestDistanceToCharacter.class.getName());
-
-    public static void main(String[] args) {
-        String S = "adebimpeb";
-        char C = 'b';
-        LOGGER.debug("Shortest Distance to {}: ",Arrays.toString(shortestDistance(S, C)));
-    }
-
     public static int[] shortestDistance(String inputStr, char targetCharacter) {
         int[] result = new int[inputStr.length()];
         int prevTargetIndex = 10000;

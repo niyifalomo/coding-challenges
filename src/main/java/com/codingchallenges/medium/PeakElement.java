@@ -23,12 +23,6 @@ import org.apache.logging.log4j.Logger;
  */
 
 public class PeakElement {
-    private static final Logger LOGGER = LogManager.getLogger(PeakElement.class);
-    public static void main(String[] args) {
-        int[] nums = {1,2,1,3,5,6,4};
-        int n = nums.length;
-        LOGGER.debug(findPeakElement(nums,0,n-1));
-    }
 
     public static int findPeakElement(int[] nums, int startIndex, int lastIndex) {
         //using recursive binary search
