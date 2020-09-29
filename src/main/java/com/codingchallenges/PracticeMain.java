@@ -1,17 +1,17 @@
 package com.codingchallenges;
 
-import com.codingchallenges.easy.*;
-import com.codingchallenges.hard.*;
-import com.codingchallenges.medium.*;
+import com.codingchallenges.medium.Meeting;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.util.ArrayList;
 
 public class PracticeMain {
 
     private static Logger LOGGER = LogManager.getLogger(PracticeMain.class);
     public static void main(String[] args){
-        String[] strings = {"cool","lock","cook"};
-        LOGGER.debug(CommonCharacters.commonChars(strings));
+        //String[] strings = {"cool","lock","cook"};
+        //LOGGER.debug(CommonCharacters.commonChars(strings));
 
         /*
          int[] nums = {3, 4, 5, 6, 7}; int target = 8;
@@ -33,7 +33,19 @@ public class PracticeMain {
         LOGGER.debug("Smallest Missing Integer: {}", smallestInteger(nums));
          */
 
+        Meeting[] mergedRanges = new Meeting[5];
+        mergedRanges[0] = new Meeting(1,3);
+        mergedRanges[1] = new Meeting(2,3);
+        mergedRanges[2] = new Meeting(4,7);
+        mergedRanges[3] = new Meeting(8,10);
+        mergedRanges[4] = new Meeting(9,20);
 
+        //merge meeting
+        Meeting meeting = new Meeting();
+        ArrayList<Meeting> mergedMeetings = meeting.mergeRanges(mergedRanges);
+        for(Meeting m:mergedMeetings){
+            System.out.format("Meeting(%s,%s)\n",m.getStartTime(),m.getEndTime());
+        }
 
     }
 }
