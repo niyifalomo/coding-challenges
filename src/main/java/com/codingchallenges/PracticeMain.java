@@ -51,7 +51,12 @@ public class PracticeMain {
 
         */
 
-        System.out.println(ReverseStringInPlace.reverse("olaniyii"));
+        //System.out.println(ReverseStringInPlace.reverse("olaniyii"));
+
+        String message = "face challenges with the right attitude";
+        System.out.println(String.valueOf(ReverseWords.reverse(message.toCharArray())));
+
+
 
     }
 }
