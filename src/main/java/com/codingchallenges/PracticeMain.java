@@ -1,6 +1,8 @@
 package com.codingchallenges;
 
-import com.codingchallenges.medium.Meeting;
+import com.codingchallenges.medium.*;
+import com.codingchallenges.easy.*;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -33,7 +35,7 @@ public class PracticeMain {
         LOGGER.debug("Smallest Missing Integer: {}", smallestInteger(nums));
          */
 
-        Meeting[] mergedRanges = new Meeting[5];
+       /* Meeting[] mergedRanges = new Meeting[5];
         mergedRanges[0] = new Meeting(1,3);
         mergedRanges[1] = new Meeting(2,3);
         mergedRanges[2] = new Meeting(4,7);
@@ -46,6 +48,10 @@ public class PracticeMain {
         for(Meeting m:mergedMeetings){
             System.out.format("Meeting(%s,%s)\n",m.getStartTime(),m.getEndTime());
         }
+
+        */
+
+        System.out.println(ReverseStringInPlace.reverse("olaniyii"));
 
     }
 }
