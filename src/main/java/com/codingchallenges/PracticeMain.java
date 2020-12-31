@@ -55,8 +55,10 @@ public class PracticeMain {
         /*String message = "face challenges with the right attitude!";
         System.out.println(String.valueOf(ReverseWords.reverse(message.toCharArray())));
          */
-        int[] arr = {1,2,2,3,4,4,5,5,5,6};
-        System.out.println(Arrays.toString(RemoveDuplicates.remove(arr)));
+        /*int[] arr = {1,2,2,3,4,4,5,5,5,6};
+        System.out.println(Arrays.toString(RemoveDuplicates.remove(arr)));*/
+
+        System.out.println(UniqueCharacters.hasUniqueCharacters("olaniyyek"));
 
 
 
