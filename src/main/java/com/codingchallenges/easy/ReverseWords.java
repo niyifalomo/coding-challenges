@@ -1,6 +1,48 @@
 package com.codingchallenges.easy;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 public class ReverseWords {
+
+    //Method 1 Using Deque
+    public static String reverse(String s) {
+
+        int left = 0;
+        int right = s.length() - 1;
+
+        // trim leading and trailing spaces
+
+        while (left <= right && s.charAt(left) == ' ') ++left;
+        while (left <= right && s.charAt(right) == ' ') --right;
+
+        //Deque to hold words
+        Deque<String> deque =  new ArrayDeque();
+
+        StringBuilder word = new StringBuilder();
+
+        while (left <= right){
+            char c = s.charAt(left);
+
+            if (word.length() != 0 && c == ' ')
+            {
+                deque.offerFirst(word.toString());
+                word.setLength(0);
+            }
+            else if ( c !=' '){
+                word.append(c);
+            }
+
+            ++left;
+        }
+        deque.offerFirst(word.toString());
+
+
+        return String.join(" ",deque);
+
+    }
+
+    //Method 2, reversing all characters , then reversing each character
     public static char[] reverse(char[] strArray) {
 
         reverseCharacters(strArray,0,strArray.length-1);

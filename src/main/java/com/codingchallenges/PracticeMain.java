@@ -49,9 +49,9 @@ public class PracticeMain {
 
         */
         //System.out.println(ReverseStringInPlace.reverse("olaniyii"));
-        /*String message = "face challenges with the right attitude!";
-        System.out.println(String.valueOf(ReverseWords.reverse(message.toCharArray())));
-         */
+        String message = "face challenges with the right attitude!";
+        System.out.println(String.valueOf(ReverseWords.reverse(message)));
+
         /*int[] arr = {1,2,2,3,4,4,5,5,5,6};
         System.out.println(Arrays.toString(RemoveDuplicates.remove(arr)));*/
 
