@@ -1,13 +1,10 @@
 package com.codingchallenges;
 
-import com.codingchallenges.medium.*;
+import com.codingchallenges.common.ListNode;
 import com.codingchallenges.easy.*;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class PracticeMain {
 
@@ -58,7 +55,16 @@ public class PracticeMain {
         /*int[] arr = {1,2,2,3,4,4,5,5,5,6};
         System.out.println(Arrays.toString(RemoveDuplicates.remove(arr)));*/
 
-        System.out.println(UniqueCharacters.hasUniqueCharacters("olaniyyek"));
+       // System.out.println(UniqueCharacters.hasUniqueCharacters("olaniyyek"));
+
+
+        ListNode lstNode1 = new ListNode(2,new ListNode(3));
+        lstNode1 = new ListNode(1, lstNode1);
+        //ReverseSinglyLinkedList.reverseListIteratively(lstNode1);
+        ReverseSinglyLinkedList.reverseListRecursively(lstNode1);
+
+
+
 
 
 
